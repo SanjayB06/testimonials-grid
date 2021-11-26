@@ -13,6 +13,7 @@ body {
     width: 90%;
     margin: 0 auto;
     display: grid;
+    margin-top: 50px;
 }
 
 /* All Cards */
@@ -52,7 +53,9 @@ body {
     opacity: .7;
 }
 
-
+p {
+    font-size: 13px;
+}
 /* Individual Cards */
 
 #Daniel {
@@ -75,4 +78,29 @@ body {
 #Patrick {
     background-color: hsl(219, 29%, 14%);
     color: hsl(0, 0%, 81%)
+}
+
+@media (min-width:800px) {
+    .container {
+        grid-template-columns: repeat(5,1fr);
+        grid-template-areas: 
+        "Daniel Daniel Daniel Jonathan Kira"
+        "Jeanette Patrick Patrick Patrick Kira";
+        grid-gap: 20px;
+    }
+    #Daniel {
+        grid-area: Daniel
+    }
+    #Jonathan {
+        grid-area: Jonathan
+    }
+    #Kira {
+        grid-area: Kira
+    }
+    #Jeanette {
+        grid-area: Jeanette;
+    }
+    #Patrick {
+        grid-area: Patrick
+    }
 }
